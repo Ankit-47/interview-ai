@@ -2,15 +2,15 @@ const mangoose = require("mongoose")
 
 
 const userSchema = new mangoose.Schema({
-    username: {
+    username : {
         type: String,       
-        unique: true, "username must be unique"
+        unique: true,
         required: true,
     },
 
     email: {
         type: String,
-        unique: true, "email must be unique"
+        unique: true, 
         required: true,
     },      
 
@@ -21,3 +21,5 @@ const userSchema = new mangoose.Schema({
 })
 
 const userModel = mangoose.model("User", userSchema)
+
+module.exports = userModel  
